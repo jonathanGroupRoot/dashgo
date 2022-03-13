@@ -14,6 +14,10 @@ import {
   RiSearchLine,
   RiUserAddLine,
 } from "react-icons/ri";
+import { Logo } from "./Header/Logo";
+import { Notifications } from "./Header/NotificationsNav";
+import { Profile } from "./Header/Profile";
+import { SearchBox } from "./Header/SearchBox";
 
 export function Header() {
   return (
@@ -27,64 +31,13 @@ export function Header() {
       px="6"
       align="center"
     >
-      <Text fontWeight="bold" letterSpacing="tight" w="64" fontSize="3xl">
-        Dashgo
-        <Text as="span" ml="1" color="pink.500">
-          .
-        </Text>
-      </Text>
+      <Logo />
 
-      <Flex
-        as="label"
-        flex="1"
-        py="4"
-        px="4"
-        pr="8"
-        ml="6"
-        maxW={400}
-        align="center"
-        alignSelf="center"
-        color="gray.200"
-        position="relative"
-        bg="gray.800"
-        borderRadius="full"
-      >
-        <Input
-          color="gray.50"
-          variant="unstyled"
-          px="4"
-          mr="4"
-          placeholder="Buscar na plataforma"
-          _placeholder={{ color: "gray.400" }}
-        />
-        <Icon as={RiSearchLine} fontSize="20" />
-      </Flex>
+      <SearchBox />
 
       <Flex align="center" ml="auto">
-        <HStack
-          spacing="4"
-          mx="8"
-          pr="8"
-          py="1"
-          color="gray.300"
-          borderRightWidth={1}
-          borderColor={"gray.700"}
-        >
-          <Icon as={RiNotificationLine} fontSize={20} />
-          <Icon as={RiUserAddLine} fontSize={20} />
-        </HStack>
-
-        <Flex align="center">
-          <Box mr="4" textAlign="right">
-            <Text>Ricardo Fonseca</Text>
-            <Text>ricardo@upper.com</Text>
-          </Box>
-          <Avatar
-            size="md"
-            name="Ricardo Fonseca"
-            src="https://github.com/0xrfsd.png"
-          />{" "}
-        </Flex>
+        <Notifications />
+        <Profile />
       </Flex>
     </Flex>
   );
