@@ -59,10 +59,10 @@ const options: ApexOptions = {
     opacity: 0.3,
     type: "gradient",
     gradient: {
-        shade: "dark",
-        opacityFrom: 0.7,
-        opacityTo: 0.5,
-    }
+      shade: "dark",
+      opacityFrom: 0.7,
+      opacityTo: 0.5,
+    },
   },
 };
 
@@ -71,7 +71,7 @@ export default function Dashboard() {
     <Flex direction="column" h="100vh">
       <Header />
 
-      <Flex w="100vw" my="6" maxWidth={1480} mx="auto" px="6">
+      <Flex w="100vw"  maxWidth={1480} mx="auto" px="6">
         <Sidebar />
 
         <SimpleGrid
@@ -80,13 +80,13 @@ export default function Dashboard() {
           minChildWidth={320}
           alignItems="flex-start"
         >
-          <Box p="8" bg="gray.800" borderRadius={8}>
+          <Box p={["6", "8"]} bg="gray.800" borderRadius={8}>
             <Text fontSize="lg" mb="4">
               Inscritos da semana
             </Text>
             <Chart type="area" height="160" series={series} options={options} />
           </Box>
-          <Box p="8" bg="gray.800" borderRadius={8}>
+          <Box p={["6", "8"]} bg="gray.800" borderRadius={8}>
             <Text fontSize="lg" mb="4">
               Taxa de abertura
             </Text>
